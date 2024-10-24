@@ -1,6 +1,6 @@
 (ns app.ui.root
   (:require
-   ["/app/ui/dividerBlot$default" :as DividerBlot]
+   ["/app/ui/dividerBlot$default" :as divider-blot]
    ["highlight.js" :as highlight]
    ["quill" :as Quill]
    ["quill-delta" :as Delta]
@@ -27,7 +27,7 @@
 (defonce quill-register
   (doto Quill
     (.register "modules/imageCompress" ImageCompress)
-    (.register DividerBlot)))
+    (.register divider-blot)))
 
 (defn insert-into-editor [editor-ref]
   (fn [image-base64-url image-blob]
